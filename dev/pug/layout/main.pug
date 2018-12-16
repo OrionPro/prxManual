@@ -1,0 +1,115 @@
+include ../mixins
+include ../../bemto/bemto
+block variables
+
+doctype html
+html(lang="ru-RU" class=stickyClass)
+	block head
+		head
+			meta(charset="utf-8")
+			title #{title}
+			<!--[if IE]>
+			meta(http-equiv='X-UA-Compatible', content="IE = edge")
+			<![endif]-->
+			meta(name="viewport" content="width=device-width,initial-scale=1")
+			meta(name="keywords" content="")
+			link(rel="shortcut icon" href="img/favicon.png" type="image/x-icon")
+			link(rel="stylesheet" type='text/css' href="css/main.css")
+
+			<!--[if lt IE 9]>
+			script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+			<![endif]-->
+	body(class=pageClass)
+		//div
+		//	.loader
+		//		.loader_inner
+		//			//include ../../img/preloader.svg
+		block modal
+			include modal
+		nav(canvas="" class="")
+			.mnu_btn
+				label(id="nav-button-label")
+					#nav-lines
+						i.nav-line
+						i.nav-line
+						i.nav-line
+						i.nav-line
+
+		div(canvas='container' class=stickyClass data-sticky-container)
+			block header
+				include ../modules/header
+			block main
+			block footer
+				include ../modules/footer
+		div(off-canvas='id-1 left shift')
+			+b.NAV.aside-mobile
+				.close-aside-mobile
+					i
+						i.fas.fa-times
+				ul
+					li.category
+						a(href="#")
+							| Название категории
+					li
+						a(href="#" class="active")
+							| Создать заказ
+					li.aside-mobile-dropdown
+						i
+							i.fas.fa-angle-right
+						a(href="#" class="navmenu-link-toggle no-click")
+							| Категория с подменю
+						+e.UL.submenu
+							li
+								a(href="#")
+									| Мой профиль
+							li
+								a(href="#" class="active")
+									| Статистика
+							li
+								a(href="#")
+									| Баланс
+							li
+								a(href="#")
+									| Выплаты
+							li
+								a(href="#")
+									| Выход
+					li
+						a(href="#")
+							| Финансы
+					li.category
+						a(href="#")
+							| Название категории 2
+					li
+						a(href="#")
+							| Статистика
+					li.aside-mobile-dropdown
+						i
+							i.fas.fa-angle-right
+						a(href="#" class="navmenu-link-toggle no-click")
+							| Категория с подменю
+						+e.UL.submenu
+							li
+								a(href="#" class="active")
+									| Статистика
+							li
+								a(href="#")
+									| Баланс
+							li.current-menu-item
+								a(href="#")
+									| Выплаты
+					li
+						a(href="#")
+							| Статистика
+					li
+						a(href="#")
+							| Статистика
+					li
+						a(href="#")
+							| Статистика
+		div(off-canvas='id-2 right push')
+		div(off-canvas='id-3 top overlay')
+		div(off-canvas='id-4 bottom shift')
+		script(src="js/libs.min.js")
+		script(src="js/main.js")
+		block script

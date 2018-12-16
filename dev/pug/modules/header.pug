@@ -1,0 +1,23 @@
+header(class="header")
+	.container-fluid
+		.row
+			.header__logo-search
+				.header__logo
+					a(href="/" class="logo" title="Логотип").
+						ProxyManual
+			.header__search-wrap
+				.header__search.sticky(data-sticky-for="767" data-margin-top="5" data-sticky-class="is-sticky")
+					i
+						i.fas.fa-search
+					input.main-input(type="text" placeholder="Найти")
+			.header__language
+				.select
+					.slct_arrow
+						i
+							i.fas.fa-angle-down
+					a(href="#" class="slct") Русский
+					ul.drop
+						li.current-lang
+							a(href="#") Русский
+						li
+							a(href="https://www.google.com.ua/") English

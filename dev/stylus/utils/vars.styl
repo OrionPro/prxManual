@@ -1,0 +1,84 @@
+@import 'utils/fonts.styl'
+@import 'utils/mixins.styl'
+
+// ЦВЕТА
+$main_color = #d00
+$auxiliary_txt_color = #443133
+$main_txt_color = #262626
+$main_bg_color = #04b
+
+// РАЗМЕРЫ
+$baseFontSize = 16px
+
+// ШРИФТЫ
+$font_main_regular = "RobotoRegular",-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+
+// КНОПКИ
+.main-btn
+	min-width: 230px
+	padding: 0 5px
+	margin: 0
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	border: 1px solid transparent
+	background-color: $main_color
+	text-transform: none
+	border-radius: 5px
+	font(#fff, 16, $font_main_regular, 1.3)
+	text-decoration: none
+	transition: 0.5s
+	&:hover
+		background-color: #fff
+		border: 1px solid $main_txt_color
+		color: $main_txt_color
+		text-decoration: none
+		outline: 0
+	&:active
+		background-color: #fff
+		border: 1px solid $main_txt_color
+		color: $main_txt_color
+		text-decoration: none
+		outline: 0
+	&:focus
+		background-color: #fff
+		border: 1px solid $main_txt_color
+		color: $main_txt_color
+		text-decoration: none
+		outline: 0
+button
+	&.main-btn
+		display: inline-block
+
+.main-input
+	width: 100%
+	height: 44px
+	border: 1px solid #b6b6b6
+	padding-left: 15px
+	border-radius: 5px
+	font-size: 16px
+	color: $main_txt_color
+	font-family: $font_main_regular
+	text-indent: 0
+	transition: 0.5s
+	&.main-input_higher
+		height: 56px
+	&.main-input_textarea
+		min-height: 160px
+		padding-top: 15px
+		overflow: hidden
+		white-space: nowrap
+		resize none
+	&:hover
+		outline: 0
+	&:active
+		border: 1px solid $main_color
+		outline: 0
+	&:focus
+		border: 1px solid $main_color
+		outline: 0
+
+.flex-center
+	display: flex
+	align-items: center
+	justify-content: center
